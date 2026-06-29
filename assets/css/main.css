@@ -623,6 +623,7 @@ section, .section {
   line-height: 1.8;
   color: var(--heading-color);
   margin-bottom: 50px;
+  text-align: justify;
 }
 
 .about .counters .counter {
