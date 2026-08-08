@@ -176,4 +176,59 @@
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
 
+  /**
+   * Project filters and details modal
+   */
+  const projectData = {
+    bloodinventory: {
+      title: 'BloodInventory',
+      description: 'BloodInventory is a web-based blood inventory management system developed using PHP, Laravel, and MySQL to manage blood-related records and inventory information through a centralized platform.',
+      technologies: ['PHP', 'Laravel', 'MySQL'],
+      features: ['Centralized blood-related record management', 'Blood inventory information management']
+    },
+    school: {
+      title: 'School Management System',
+      description: 'A PHP and MySQL-based School Management System designed to organize and manage school-related information and administrative records through a centralized web application.',
+      technologies: ['PHP', 'MySQL'],
+      features: ['Centralized school information management', 'Administrative record management']
+    },
+    mystudyacademy: {
+      title: 'MyStudyAcademy',
+      description: 'MyStudyAcademy is an education-focused web application developed using PHP and SQL, providing students with educational information, course details, examination resources, and academic content.',
+      technologies: ['PHP', 'SQL'],
+      features: ['Course information', 'Examination resources', 'Academic content', 'Dynamic educational information']
+    },
+    iiem: {
+      title: 'IIEM Institution',
+      description: 'IIEM Institution is a comprehensive education management and information platform developed using PHP and SQL/MySQL, featuring course management, university information, distance education, competitive exams, student services, online verification, application tracking, and administrative management.',
+      technologies: ['PHP', 'SQL', 'MySQL'],
+      features: ['Course management', 'University management and course-university mapping', 'Distance education', 'Competitive exam information and exam details', 'Student enquiry and student management', 'Online verification and application status', 'EMI / payment management', 'Certificate verification and PDF generation', 'FAQ and testimonial management', 'Admin and student/user dashboards', 'SEO-friendly pages', 'Responsive UI']
+    }
+  };
+
+  document.querySelectorAll('.project-filter').forEach(filterButton => {
+    filterButton.addEventListener('click', () => {
+      const filter = filterButton.dataset.filter;
+      document.querySelectorAll('.project-filter').forEach(button => button.classList.remove('active'));
+      filterButton.classList.add('active');
+      document.querySelectorAll('.project-card').forEach(card => {
+        const matches = filter === 'all' || card.dataset.projectTech.split(' ').includes(filter);
+        card.classList.toggle('is-hidden', !matches);
+      });
+    });
+  });
+
+  const projectModal = document.getElementById('projectDetailsModal');
+  if (projectModal) {
+    projectModal.addEventListener('show.bs.modal', event => {
+      const project = projectData[event.relatedTarget.dataset.project];
+      if (!project) return;
+
+      projectModal.querySelector('#projectDetailsTitle').textContent = project.title;
+      projectModal.querySelector('#projectDetailsDescription').textContent = project.description;
+      projectModal.querySelector('#projectDetailsTech').innerHTML = project.technologies.map(technology => `<span>${technology}</span>`).join('');
+      projectModal.querySelector('#projectDetailsFeatures').innerHTML = project.features.map(feature => `<li>${feature}</li>`).join('');
+    });
+  }
+
 })();

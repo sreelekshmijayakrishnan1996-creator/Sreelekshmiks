@@ -79,7 +79,7 @@
             <div class="actions">
               <a href="#portfolio" class="btn-main">View My Projects</a>
               <a href="#contact" class="btn-line">Let's Talk <i class="bi bi-arrow-right"></i></a>
-              <a href="assets/resume/Sreelekshmi_K_Resume.pdf"
+              <a href="Sreelekshmi_new_resume (2)".pdf"
    target="_blank"
    class="btn-main">
     <i class="fas fa-file-pdf"></i>
@@ -350,153 +350,47 @@
 
     <!-- Projects Portfolio Section -->
     <section id="portfolio" class="portfolio section light-background">
-      <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Key Projects</h2>
-        <p>Selected engineering case studies showcasing my technical capabilities</p>
+        <h2>My Projects</h2>
+        <p>A selection of projects I have developed using PHP, Laravel, MySQL, SQL, and modern web technologies.</p>
       </div>
 
       <div class="container">
-        <div class="cases">
-
-          <!-- Project 1 -->
-          <article class="case" data-aos="fade-up" data-aos-delay="100">
-            <div class="row g-4 align-items-center">
-              <div class="col-lg-6">
-                <div class="shot">
-                  <img src="assets/img/project1.png" alt="Infoshoper E-Commerce Platform" class="img-fluid">
-                </div>
-              </div>
-              <div class="col-lg-6">
-    <div class="copy">
-        <span class="cat">Web Application · E-Commerce</span>
-
-        <h3>Infoshoper RFID E-Commerce Platform</h3>
-
-        <p>
-            Developed a full-stack RFID e-commerce platform using ASP.NET MVC and MS SQL Server for selling RFID products, including RFID tags, RFID readers, RFID sensors, and related accessories. The platform provides secure user authentication, product management, shopping cart functionality, order processing, and a responsive user experience. Key achievements include:
-        </p>
-
-        <ul>
-            <li>Developed secure user authentication with password hashing and session management.</li>
-            <li>Built complete e-commerce modules, including product catalog, product search, shopping cart, wishlist, and checkout.</li>
-            <li>Implemented CRUD operations for products, categories, customers, and order management.</li>
-            <li>Designed and optimized the MS SQL Server database to improve product retrieval and order processing performance.</li>
-            <li>Protected the application against SQL injection and other common web vulnerabilities using parameterized queries and input validation.</li>
-            <li>Created a responsive and user-friendly interface using HTML5, CSS3, Bootstrap, and JavaScript.</li>
-            <li>Integrated role-based access for administrators and customers to manage products, orders, and user accounts efficiently.</li>
-        </ul>
-
-        <div class="tech-pills">
-            <span>ASP.NET MVC</span>
-            <span>C#</span>
-            <span>MS SQL Server</span>
-            <span>HTML5</span>
-            <span>CSS3</span>
-            <span>Bootstrap</span>
-            <span>JavaScript (ES6)</span>
-            <span>jQuery</span>
-            <span>Visual Studio</span>
-            <span>Git</span>
+        <div class="project-filters" data-aos="fade-up" data-aos-delay="50" role="group" aria-label="Filter projects by technology">
+          <button class="project-filter active" type="button" data-filter="all">All</button>
+          <button class="project-filter" type="button" data-filter="php">PHP</button>
+          <button class="project-filter" type="button" data-filter="laravel">Laravel</button>
+          <button class="project-filter" type="button" data-filter="mysql">MySQL</button>
+          <button class="project-filter" type="button" data-filter="sql">SQL</button>
         </div>
-    </div>
-</div>
-            </div>
+
+        <div class="project-grid">
+          <article class="project-card" data-project-tech="php laravel mysql" data-aos="fade-up" data-aos-delay="100">
+            <div class="project-visual blood-visual" role="img" aria-label="Blood inventory dashboard visual"><i class="bi bi-droplet-half"></i><span>Inventory / Records</span></div>
+            <div class="project-card-body"><span class="project-category">Web Application · Health Tech</span><h3>BloodInventory</h3><p>BloodInventory is a web-based blood inventory management system developed using PHP, Laravel, and MySQL to manage blood-related records and inventory information through a centralized platform.</p><div class="tech-pills"><span>PHP</span><span>Laravel</span><span>MySQL</span></div><button class="project-view" type="button" data-bs-toggle="modal" data-bs-target="#projectDetailsModal" data-project="bloodinventory"><span>View Project</span><i class="bi bi-arrow-up-right"></i></button></div>
           </article>
 
-          <!-- Project 2 -->
-          <article class="case" data-aos="fade-up" data-aos-delay="200">
-            <div class="row g-4 align-items-center">
-              <div class="col-lg-6 order-lg-2">
-                <div class="shot">
-                  <img src="assets/img/project2.png" alt="College Management Web Portal" class="img-fluid">
-                </div>
-              </div>
-              <div class="col-lg-6 order-lg-1">
-                <div class="copy">
-                  <span class="cat">Web Application · Portal</span>
-                  <h3>College Management Web Portal</h3>
-                  <p>Architected and deployed a multi-role administrative portal that organizes student records, faculty schedules, and course offerings with robust CRUD interfaces. Key achievements include:</p>
-                  <ul>
-                    <li>Designed role-based access controls restricting view/edit scopes for admin, faculty, and student layers.</li>
-                    <li>Optimized database search indices, speeding up record retrieval for student lists by over 40%.</li>
-                    <li>Maintained a clean, modular, and reusable C# backend logic layout following SOLID architecture conventions.</li>
-                  </ul>
-                  <div class="tech-pills">
-                    <span>ASP.NET MVC</span>
-                    <span>C#</span>
-                    <span>JavaScript</span>
-                    <span>HTML5 / CSS3</span>
-                    <span>MySQL</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <article class="project-card" data-project-tech="php mysql" data-aos="fade-up" data-aos-delay="150">
+            <div class="project-visual school-visual" role="img" aria-label="School management system visual"><i class="bi bi-building"></i><span>Students / Administration</span></div>
+            <div class="project-card-body"><span class="project-category">Web Application · Education</span><h3>School Management System</h3><p>A PHP and MySQL-based School Management System designed to organize and manage school-related information and administrative records through a centralized web application.</p><div class="tech-pills"><span>PHP</span><span>MySQL</span></div><button class="project-view" type="button" data-bs-toggle="modal" data-bs-target="#projectDetailsModal" data-project="school"><span>View Project</span><i class="bi bi-arrow-up-right"></i></button></div>
           </article>
 
-          <!-- Project 3 -->
-          <article class="case" data-aos="fade-up" data-aos-delay="300">
-            <div class="row g-4 align-items-center">
-              <div class="col-lg-6">
-                <div class="shot">
-                  <img src="assets/img/project3.png" alt="PHP Student Management Project" class="img-fluid">
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="copy">
-                  <span class="cat">Web Application · Management</span>
-                  <h3>PHP Student Management Project</h3>
-                  <p>Designed and built a responsive student database management system using clean raw PHP OOP/MVC paradigms. Key achievements include:</p>
-                  <ul>
-                    <li>Developed full CRUD modules for student records, enrollment tracking, course scheduling, and grade reporting.</li>
-                    <li>Managed secure, parameterized DB connections and protected inputs to prevent cross-site scripting (XSS) and SQL injection.</li>
-                    <li>Designed a normalized MySQL schema mapping database tables with primary and foreign key constraints.</li>
-                  </ul>
-                  <div class="tech-pills">
-                    <span>PHP (OOP/MVC)</span>
-                    <span>JavaScript</span>
-                    <span>HTML5 / CSS3</span>
-                    <span>Bootstrap</span>
-                    <span>MySQL</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <article class="project-card" data-project-tech="php sql" data-aos="fade-up" data-aos-delay="200">
+            <div class="project-visual study-visual" role="img" aria-label="MyStudyAcademy education visual"><i class="bi bi-mortarboard"></i><span>Courses / Exams / Resources</span></div>
+            <div class="project-card-body"><span class="project-category">Web Application · Education</span><h3>MyStudyAcademy</h3><p>MyStudyAcademy is an education-focused web application developed using PHP and SQL, providing students with educational information, course details, examination resources, and academic content.</p><div class="tech-pills"><span>PHP</span><span>SQL</span></div><button class="project-view" type="button" data-bs-toggle="modal" data-bs-target="#projectDetailsModal" data-project="mystudyacademy"><span>View Project</span><i class="bi bi-arrow-up-right"></i></button></div>
           </article>
 
-          <!-- Project 4 -->
-          <article class="case" data-aos="fade-up" data-aos-delay="400">
-            <div class="row g-4 align-items-center">
-              <div class="col-lg-6 order-lg-2">
-                <div class="shot">
-                  <img src="assets/img/project4.png" alt="Laravel Blood Inventory Project" class="img-fluid">
-                </div>
-              </div>
-              <div class="col-lg-6 order-lg-1">
-                <div class="copy">
-                  <span class="cat">Web Application · Health Tech</span>
-                  <h3>Laravel Blood Inventory Project</h3>
-                  <p>Engineered a comprehensive blood bank inventory registry and donor tracking application using the Laravel framework. Key achievements include:</p>
-                  <ul>
-                    <li>Created donor registration registers, stock counters by blood group, and status indicators.</li>
-                    <li>Utilized Laravel Eloquent ORM relationships, middleware request guards, and blade views for layout separation.</li>
-                    <li>Integrated AJAX-based dynamic filters for matching urgent blood requests with compatible active donors instantly.</li>
-                  </ul>
-                  <div class="tech-pills">
-                    <span>Laravel (PHP)</span>
-                    <span>Bootstrap</span>
-                    <span>AJAX / JavaScript</span>
-                    <span>Blade Engine</span>
-                    <span>MySQL</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <article class="project-card" data-project-tech="php sql mysql" data-aos="fade-up" data-aos-delay="250">
+            <div class="project-visual iiem-visual" role="img" aria-label="IIEM Institution education platform visual"><i class="bi bi-globe2"></i><span>Institution / Student Services</span></div>
+            <div class="project-card-body"><span class="project-category">Web Application · Institution</span><h3>IIEM Institution</h3><p>IIEM Institution is a comprehensive education management and information platform developed using PHP and SQL/MySQL, featuring course management, university information, student services, and administrative management.</p><div class="tech-pills"><span>PHP</span><span>SQL</span><span>MySQL</span></div><button class="project-view" type="button" data-bs-toggle="modal" data-bs-target="#projectDetailsModal" data-project="iiem"><span>View Project</span><i class="bi bi-arrow-up-right"></i></button></div>
           </article>
-
         </div>
       </div>
     </section>
+
+    <div class="modal fade project-modal" id="projectDetailsModal" tabindex="-1" aria-labelledby="projectDetailsTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content"><div class="modal-header"><div><span class="project-category">Project details</span><h2 id="projectDetailsTitle" class="modal-title"></h2></div><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body"><p id="projectDetailsDescription"></p><h3>Technologies</h3><div id="projectDetailsTech" class="tech-pills"></div><h3>Project scope</h3><ul id="projectDetailsFeatures"></ul></div></div></div>
+    </div>
 
     <!-- Process Section -->
     <section id="process" class="process section">
